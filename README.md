@@ -8,19 +8,19 @@
 
 First, we need to install [Hexo](https://hexo.io). But that's so easy, so i think you can do it.
 
-The next . Use `terminal` input the next commad.
+The next . Use `terminal` input the next command.
 
 ```bash
 cd /your_hexo_path/theme/
 ```
 
-Now. We move to your blog. We need use Git clone the repertory. Use `terminal` input the next commad.
+Now. We move to your blog. We need use Git clone the repertory. Use `terminal` input the next command.
 
 ```bash
 git clone https://github.com/isecret/Hola
 ```
 
-Wait a moment. Hola has been instaledl to your Hexo. it's so easy.
+Wait a moment. Hola has been instaled to your Hexo. it's so easy.
 
 All right. Let's turn it on! You need to edit `your_hexo_path/_config.yml` . find `theme` the param. Change it.
 
