@@ -1,3 +1,6 @@
+/**
+ * reset css
+ */
 abbr,article,aside,audio,blockquote,body,code,div,em,fieldset,footer,form,h1,h2,h3,h4,h5,h6,header,html,img,label,legend,li,nav,object,ol,p,pre,section,span,table,tbody,tfoot,thead,time,tr,ul,video {
     font-weight: inherit;
     vertical-align: baseline;
@@ -510,6 +513,10 @@ hr {
         list-style: none;
         line-height: 2;
     }
+
+    .gitment-editor-footer-tip {
+        display: none !important;
+    }
 }
 
 .post-footer {
@@ -561,6 +568,10 @@ hr {
 .footer-author, .footer-inner {
     font-size: 14px;
 }
+
+/**
+ * highlight.css
+ */
 
 .hljs {
     display: block;
