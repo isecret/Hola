@@ -1,0 +1,92 @@
+
+<%
+var pageTitle = page.title || config.subtitle || '';
+if (is_archive()) pageTitle = '归档';
+if (is_tag()) pageTitle = '标签: ' + page.tag;
+if (is_category()) pageTitle = '分类: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+pageTitle += ' | ' + config.title;
+if (is_home()) pageTitle = config.title;
+%>
+
+<!DOCTYPE html>
+<html lang="<%=config.language%>">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title><%=pageTitle%></title>
+    <% if (page.keywords !== undefined) { %>
+        <meta name="keywords" content="<%=page.keywords%>" />
+    <% } else if (page.tags !== undefined && page.tags.length > 0) { %>
+        <meta name="keywords" content="<% page.tags.forEach(function(tag) { %><%=tag.name%>,<% }); %>" />
+    <% } else if (theme.keywords !== undefined) { %>
+        <meta name="keywords" content="<%=theme.keywords%>" />
+    <% } %>
+    <link rel="shortcut icon" type="image/x-icon" href="<%=theme.favicon%>">
+    <%-open_graph()%>
+    <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+        <% theme.stylesheets.forEach(function(url) { %>
+            <link rel="stylesheet" href="<%=url%>">
+        <% }); %>
+    <% } %>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="header-site">
+            <div class="header-title">
+                <%=config.title%>
+            </div>
+            <div class="header-subtitle">
+                <%=config.subtitle%>
+            </div>
+        </div>
+        <div class="header-menu">
+            <% Object.keys(theme.menu).forEach(function(key) { %>
+                <span class="header-nav">
+                    <a href="<%=theme.menu[key]%>"><%=key%></a>
+                </span>
+            <% }); %>
+        </div>
+    </div>
+
+    <div id="content-outer">
+        <div id="content-inner">
+            <%- body %>
+        </div>
+    </div>
+
+    <div class="footer-outer">
+        <div class="footer-author">
+            © <%=theme.since%> - <%=time(new Date(),'Y')%> <%=config.author%>
+        </div>
+        <div class="footer-inner">由 <a href="http://hexo.io">Hexo</a> 强力驱动 | 主题 - <a href="#">Hola</a></div>
+    </div>
+
+    <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+        <% theme.scripts.forEach(function(url) { %>
+            <script src="<%=url%>"></script>
+        <% }); %>
+    <% } %>
+    <% if (is_post() || is_page()) { %>
+        <script>
+            var gitment = new Gitment({
+                id: window.location.pathname.replace(/(\/$)/g,""),
+                owner: "<%=theme.gitment.owner%>",
+                repo: "<%=theme.gitment.repo%>",
+                oauth: {
+                    client_id: "<%=theme.gitment.client_id%>",
+                    client_secret: "<%=theme.gitment.client_secret%>"
+                }
+            });
+            gitment.render("gitment");
+        </script>
+    <% } %>
+    <script data-no-instant>InstantClick.init();</script>
+</div>
+</body>
+</html>

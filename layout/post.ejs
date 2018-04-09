@@ -1,0 +1,47 @@
+<%
+    var tocContents = toc(page.content, {list_number: false});
+%>
+
+
+<article class="post">
+    <h1 class="post-title"><%=page.title%></h1>
+    <% if (tocContents.length > 0) { %>
+        <h2>目录</h2>
+        <%-tocContents%>
+        <br>
+    <% } %>
+    <%-page.content%>
+</article>
+<div class="post-footer">
+    <div class="post-author">
+        <span>创作于 <%=date(page.date, 'll')%></span>
+    </div>
+    <div class="post-category">
+        <span>分类于「<% page.categories.forEach(function(category, index) { %>
+                    <% if (index>0) {%>、<% } %>
+                    <a href="/categories/<%=category.name%>"><%=category.name%></a>
+                <% }); %>」
+        </span>
+    </div>
+    <div class="post-tags">
+        <% page.tags.forEach(function(tag, index) { %>
+            <% if (index>0) {%>、<% } %>
+            <a href="/tags/<%=tag.name%>">#<%=tag.name%></a>
+        <% }); %>
+    </div>
+    <% if (page.prev || page.next){ %>
+        <div class="pagination">
+            <% if (page.next){ %>
+                <div class="nav-next nav-item">
+                        <a href="<%- url_for(page.next.path) %>"><%=page.next.title %></a>
+                </div>
+            <% } %>
+            <% if (page.prev){ %>
+                <div class="nav-prev nav-item">
+                        <a href="<%- url_for(page.prev.path) %>"><%=page.prev.title %></a>
+                </div>
+            <% } %>
+        </div>
+    <% } %>
+</div>
+<div id="gitment"></div>

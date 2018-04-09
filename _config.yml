@@ -1,0 +1,46 @@
+
+# 站点关键字
+keywords: "Secret Blog, Secret, 王茂的个人博客"
+
+# 建站日期
+since: 2016
+
+# 导航栏
+menu:
+  首页: /
+  归档: /archives
+  关于: /about
+  友链: /links
+
+# Gitment
+gitment:
+  owner: isecret
+  repo: comments
+  client_id: fd2eb35d0541586fff12
+  client_secret: 2d3600405c3d52acc4350bde075e176cdb633cea
+
+# 联系方式
+social:
+  QQ: 572524331
+  邮箱: root@isecret.vip
+  微博: myiooc
+  GitHub: isecret
+  Coding: isecret
+
+# 站点微缩图
+favicon: /favicon.ico
+
+# 站点 Logo
+logo: /favicon.png
+
+# CSS 样式表路径
+stylesheets:
+- //fonts.openapi.link/css?family=Lato:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext
+- /css/gitment.css
+- /css/hola.css
+
+# Javascript 脚本路径
+scripts:
+- /js/instantclick.min.js
+- /js/gitment.browser.min.js
+- /js/hola.js
