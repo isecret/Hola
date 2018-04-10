@@ -1,22 +1,37 @@
 
-<div class="category">
-  <h1><%=page.category%></h1>
-  <% page.posts.each(function(article) { %>
-    <div class="category-item">
-      <% if (article.link) { %>
-        <a href="<%=url_for(article.link)%>" target="_blank">
-          <%=article.title || 'No Title'%>
-        </a>
-      <% } else { %>
-        <a href="<%=url_for(article.path)%>">
-          <%=article.title || 'No Title'%>
-        </a>
-      <% } %>
-      <time datetime="<%=date_xml(article.date)%>">
-        <%=date(article.date)%>
-      </time>
-    </div>
-  <% }); %>
-</div>
+<article class="category">
+    <h1><%=page.category%></h1>
+    <% page.posts.each(function(article) { %>
+        <div class="recent-post-items">
+            <span class="recent-post-time"><%=date(article.date, 'MMM Do')%></span>
+            <span class="recent-post-item">
+                <% if (article.link) { %>
+                    <a href="<%=url_for(article.link)%>" target="_blank"><%=article.title%></a>
+                <% } else { %>
+                    <a href="<%=url_for(article.link)%>">
+                    <%=article.title || 'No Title'%>
+                    </a>
+                <% } %>
+            </span>
+        </div>
+    <% }); %>
+</article>
 
-<%-paginator()%>
+<% if (page.prev || page.next){ %>
+    <div class="pagination noborder">
+        <% if (page.next){ %>
+            <div class="nav-next nav-item">
+                <a href="/page/<%=page.next%>">较旧的文章</a>
+            </div>
+        <% } %>
+        <% if (page.prev){ %>
+            <div class="nav-prev nav-item">
+                <% if (page.prev == 1) { %>
+                    <a href="/">较新的文章</a>
+                <% } else { %>
+                    <a href="/page/<%=page.prev%>">较新的文章</a>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+<% } %>

@@ -1,24 +1,28 @@
+<%
+    var last;
+%>
 
-<% if (page.posts.length > 0) { %>
+<article class="recent-posts">
+    <h1 class="recent-title">Note</h1>
     <div class="recent-posts">
-        <h1 class="recent-title">Note</h1>
-        <ul class="recent-posts-ul">
-            <% page.posts.sort('date', -1).each(function(post) { %>
-                <li class="recent-posts-li">
-                    <div class="recent-post-item">
-                        <% if (post.date) { %>
-                            <div class="recent-post-time" datetime="<%=post.date.toJSON()%>">
-                                <%=date(post.date, 'll')%>
-                            </div>
-                            <span class="h"> - </span>
-                        <% } %>
-                        <a href="<%=config.root + post.path%>"><%=post.title%></a>
-                    </div>
-                </li>
-            <% }); %>
-        </ul>
+        <% page.posts.each(function(item){ %>
+            <% var year = item.date.year(); %>
+            <% if (last != year){ %>
+                <% last = year; %>
+                <div class="recent-post-year-title">
+                    <h2 class="recent-post-year"><%=year%></h2>
+                </div>
+            <% } %>
+            <div class="recent-post-items">
+                <span class="recent-post-time"><%=date(item.date, 'MMM Do')%></span>
+                <span class="recent-post-item">
+                    <a href="/<%-item.path %>"><%=item.title%></a>
+                </span>
+            </div>
+        <% }); %>
     </div>
-<% } %>
+</article>
+
 
 <% if (page.prev || page.next){ %>
     <div class="pagination noborder">

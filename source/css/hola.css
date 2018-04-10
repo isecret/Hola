@@ -360,7 +360,7 @@ figure {
 
 code {
     padding: 2px 4px;
-    color: #777;
+    color: #999;
     background: #f7f7f7;
     border-radius: 3px;
     font-size: 14px;
@@ -403,7 +403,7 @@ blockquote {
 }
 
 .recent-posts, .post, .page, .archive, .tag, .category, .archive {
-    min-height: 540px;
+    min-height: 620px;
 }
 
 .recent-posts img, .post img, .page img, .archive img, .tag img, .category img, .archive img {
@@ -421,6 +421,10 @@ hr {
     height: 1px;
     border: none;
     background-color: #F0F0F0;
+}
+
+article {
+    padding: 20px 0;
 }
 
 .container {
@@ -459,7 +463,7 @@ hr {
 
 .header-subtitle {
     font-style: oblique;
-    color: #777;
+    color: #999;
     font-size: 14px;
 }
 
@@ -480,40 +484,40 @@ hr {
     content: '';
 }
 
-.recent-posts {
-
+.recent-post-year-title {
+    font-size: 20px;
 }
 
-.recent-title, .post-title, .archive-title, .page-title {
-    font-size: 26px;
-    margin: 16px 0;
+.recent-post-year-title .recent-post-year {
+    font-size: 20px;
+    margin: 18px 0;
+    font-weight: 400;
+    line-height: 34px;
 }
 
-.recent-posts .recent-posts-ul {
-    margin: 0;
-    line-height: 2;
+.recent-post-items {
+    margin: 15px 0;
 }
 
-.recent-post-time {
-    display: inline-block;
+.recent-post-items .recent-post-time {
+    float: left;
+    overflow: hidden;
+    color: #999;
+    font-size: 14px;
+    line-height: 25px;
+    display: block;
+}
+
+.recent-post-items .recent-post-item {
+    margin-left: 85px;
+    display: block;
+}
+
+.recent-post-item a {
+    font-size: 16px;
 }
 
 @media (max-width:767px) {
-    .h {
-        display: none;
-    }
-
-    .recent-post-time {
-        display: block;
-    }
-
-    .recent-posts .recent-posts-ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        line-height: 2;
-    }
-
     .gitment-editor-footer-tip {
         display: none !important;
     }
@@ -524,6 +528,7 @@ hr {
 }
 
 .post-footer .post-category, .post-footer .post-tags, .post-footer .post-author {
+    color: #999;
     text-align: right;
 }
 
@@ -566,6 +571,7 @@ hr {
 }
 
 .footer-author, .footer-inner {
+    color: #999;
     font-size: 14px;
 }
 
