@@ -37,7 +37,7 @@ gitment:
   client_secret: 2d3600405c3d52acc4350bde075e176cdb633cea
 
 # 腾讯统计
-tencent_analytics: 65634393
+tencent_analytics: 63006715
 
 # CSS 样式表路径
 stylesheets:
