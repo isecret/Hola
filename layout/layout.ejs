@@ -72,8 +72,15 @@ if (is_home()) pageTitle = config.title;
             <script src="<%=url%>"></script>
         <% }); %>
     <% } %>
-    <% if (theme.tajs !== undefined) { %>
-        <script src="//tajs.qq.com/stats?sId=<%=theme.tajs%>"></script>
+    <% if (theme.tencent_analytics !== undefined) { %>
+        <script type="text/javascript">
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "//tajs.qq.com/stats?sId=<%=theme.tencent_analytics%>";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
     <% } %>
     <% if (is_post() || is_page()) { %>
         <script>
