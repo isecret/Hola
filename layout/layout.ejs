@@ -46,12 +46,12 @@ if (is_home()) pageTitle = config.title;
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <div class="header-outer">
             <div class="header-site">
                 <div class="header-title">
                     <%=config.title%>
                 </div>
-                <div class="header-subtitle">
+                <div id="hitokoto" class="header-subtitle">
                     <%=config.subtitle%>
                 </div>
             </div>
@@ -95,6 +95,21 @@ if (is_home()) pageTitle = config.title;
             });
             gitment.render("gitment");
         </script>
+    <% } %>
+    <% if (theme.hitokoto == 'enabled') { %>
+    <script>
+        fetch('https://v1.hitokoto.cn')
+            .then(function (res){
+                return res.json();
+            })
+            .then(function (data) {
+                var hitokoto = document.getElementById('hitokoto');
+                hitokoto.innerText = '「' + data.hitokoto + '」——' + data.from;
+            })
+            .catch(function (err) {
+                console.error(err);
+            });
+    </script>
     <% } %>
     <script data-no-instant>InstantClick.init();</script>
 </body>

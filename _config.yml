@@ -12,16 +12,6 @@ menu:
   关于: /about
   友链: /links
 
-# Gitment
-gitment:
-  owner: isecret
-  repo: comments
-  client_id: fd2eb35d0541586fff12
-  client_secret: 2d3600405c3d52acc4350bde075e176cdb633cea
-
-# 腾讯统计
-tencent_analytics: 65634393
-
 # 联系方式
 social:
   QQ: 572524331
@@ -36,6 +26,19 @@ favicon: /favicon.ico
 # 站点 Logo
 logo: /favicon.png
 
+# 一言 hitokoto
+hitokoto: enabled
+
+# Gitment
+gitment:
+  owner: isecret
+  repo: comments
+  client_id: fd2eb35d0541586fff12
+  client_secret: 2d3600405c3d52acc4350bde075e176cdb633cea
+
+# 腾讯统计
+tencent_analytics: 65634393
+
 # CSS 样式表路径
 stylesheets:
 - //fonts.openapi.link/css?family=Lato:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext
@@ -44,6 +47,8 @@ stylesheets:
 
 # Javascript 脚本路径
 scripts:
+- /js/jquery.min.js
+- /js/fetch.min.js
 - /js/instantclick.min.js
 - /js/gitment.browser.min.js
 - /js/hola.js
