@@ -151,12 +151,6 @@ code,kbd,pre,samp {
     font-family: monospace
 }
 
-@media (max-width: 767px) {
-    .post-body pre, .post-body .highlight {
-        padding: 10px;
-    }
-}
-
 body, h1, h2, h3, h4, h5, h6 {
     font-family: Lato,"PingFang SC","Microsoft YaHei",sans-serif;
     margin: 0;
@@ -308,89 +302,6 @@ td, th {
     border-right: 1px solid #eee;
 }
 
-.highlight {
-    border-radius: 1px;
-}
-
-.highlight, pre {
-    overflow: auto;
-    margin: 20px 0;
-    padding: 0;
-    font-size: 13px;
-    color: #4d4d4c;
-    background: #f7f7f7;
-    line-height: 1.6;
-}
-
-figure {
-    margin: 1em 40px;
-}
-
-.highlight table {
-    margin: 0;
-    width: auto;
-    border: none;
-}
-
-.highlight td {
-    border: none;
-    padding: 0;
-}
-
-.gutter {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.highlight .gutter pre {
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #869194;
-    text-align: right;
-    background-color: #f7f7f7;
-}
-
-.highlight pre {
-    border: none;
-    margin: 0;
-    padding: 10px 0;
-}
-
-code {
-    padding: 2px 4px;
-    color: #999;
-    background: #f7f7f7;
-    border-radius: 3px;
-    font-size: 14px;
-}
-
-code, pre {
-    font-family: consolas,Menlo,"PingFang SC","Microsoft YaHei",monospace;
-}
-
-.highlight td {
-    border: none;
-    padding: 0;
-}
-
-caption, td, th {
-    padding: 8px;
-    text-align: left;
-    font-weight: 400;
-}
-
-caption, code, td, th {
-    vertical-align: middle;
-}
-
-.highlight .code pre {
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #f7f7f7;
-}
-
 b, dt, optgroup, strong {
     font-weight: 700;
 }
@@ -475,21 +386,7 @@ article {
     font-size: 16px;
 }
 
-.header-nav:after {
-    margin: 0 4px;
-    content: '/';
-}
-
-.header-nav:last-child:after {
-    content: '';
-}
-
-.recent-post-year-title {
-    font-size: 20px;
-}
-
 .recent-post-year-title .recent-post-year {
-    font-size: 20px;
     margin: 18px 0;
     font-weight: 400;
     line-height: 34px;
@@ -528,6 +425,7 @@ article {
 }
 
 .post-footer .post-category, .post-footer .post-tags, .post-footer .post-author {
+    font-size: 14px;
     color: #999;
     text-align: right;
 }
@@ -570,14 +468,114 @@ article {
     padding: .4em 0;
 }
 
-.footer-author, .footer-inner {
+.footer-items, .footer-other {
     color: #999;
     font-size: 14px;
+}
+
+.footer-copyright {
+    margin-right: 2px;
+}
+
+.footer-year, .footer-author {
+    margin: 0 2px;
+}
+
+.footer-icon {
+    color: tomato;
+}
+
+.footer-wordcount {
+    margin-left: 2px;
 }
 
 /**
  * highlight.css
  */
+
+
+.highlight {
+    border-radius: 1px;
+}
+
+.highlight, pre {
+    overflow: auto;
+    margin: 20px 0;
+    padding: 0;
+    font-size: 13px;
+    color: #4d4d4c;
+    background: #f7f7f7;
+    line-height: 1.6;
+}
+
+figure {
+    margin: 1em 40px;
+}
+
+.highlight table {
+    margin: 0;
+    width: auto;
+    border: none;
+}
+
+.highlight td {
+    border: none;
+    padding: 0;
+}
+
+.gutter {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.highlight .gutter pre {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #869194;
+    text-align: right;
+    background-color: #f7f7f7;
+}
+
+.highlight pre {
+    border: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+code {
+    padding: 2px 4px;
+    color: #999;
+    background: #f7f7f7;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+code, pre {
+    font-family: consolas,Menlo,"PingFang SC","Microsoft YaHei",monospace;
+}
+
+.highlight td {
+    border: none;
+    padding: 0;
+}
+
+caption, td, th {
+    padding: 8px;
+    text-align: left;
+    font-weight: 400;
+}
+
+caption, code, td, th {
+    vertical-align: middle;
+}
+
+.highlight .code pre {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #f7f7f7;
+}
 
 .hljs {
     display: block;

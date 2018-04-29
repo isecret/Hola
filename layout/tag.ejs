@@ -21,7 +21,10 @@
     <div class="pagination noborder">
         <% if (page.next){ %>
             <div class="nav-next nav-item">
-                <a href="/page/<%=page.next%>">较旧的文章</a>
+                <a href="/page/<%=page.next%>">
+                    <i class="fa fa-angle-left"></i>
+                    <span>较旧的文章</span>
+                </a>
             </div>
         <% } %>
         <% if (page.prev){ %>
@@ -29,7 +32,10 @@
                 <% if (page.prev == 1) { %>
                     <a href="/">较新的文章</a>
                 <% } else { %>
-                    <a href="/page/<%=page.prev%>">较新的文章</a>
+                    <a href="/page/<%=page.prev%>">
+                        <span>较新的文章</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 <% } %>
             </div>
         <% } %>

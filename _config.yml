@@ -19,6 +19,12 @@ social:
   GitHub: isecret
   Coding: isecret
 
+# 底部字数统计 需安装 hexo-wordcount 插件
+footer_wordcount: enabled
+
+# 底部版权补充
+footer_expand: 'Hosted by <a href="https://pages.coding.me">Coding Pages</a>, '
+
 # 站点微缩图
 favicon: /favicon.ico
 
@@ -41,6 +47,7 @@ tencent_analytics: 63006715
 # CSS 样式表路径
 stylesheets:
 - //fonts.openapi.link/css?family=Lato:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext
+- /css/font-awesome.min.css
 - /css/gitment.css
 - /css/hola.css
 

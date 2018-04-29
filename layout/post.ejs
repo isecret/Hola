@@ -33,12 +33,18 @@
         <div class="pagination">
             <% if (page.next){ %>
                 <div class="nav-next nav-item">
-                        <a href="<%- url_for(page.next.path) %>"><%=page.next.title %></a>
+                    <a href="<%- url_for(page.next.path) %>">
+                        <i class="fa fa-angle-left"></i>
+                        <span><%=page.next.title%></span>
+                    </a>
                 </div>
             <% } %>
             <% if (page.prev){ %>
                 <div class="nav-prev nav-item">
-                        <a href="<%- url_for(page.prev.path) %>"><%=page.prev.title %></a>
+                    <a href="<%- url_for(page.prev.path) %>">
+                        <span><%=page.prev.title%></span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 </div>
             <% } %>
         </div>

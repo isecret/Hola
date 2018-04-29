@@ -18,7 +18,6 @@ if (is_home()) pageTitle = config.title;
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
-    <title><%=pageTitle%></title>
     <% if (page.keywords !== undefined) { %>
         <meta name="keywords" content="<%=page.keywords%>" />
     <% } else if (page.tags !== undefined && page.tags.length > 0) { %>
@@ -26,8 +25,9 @@ if (is_home()) pageTitle = config.title;
     <% } else if (theme.keywords !== undefined) { %>
         <meta name="keywords" content="<%=theme.keywords%>" />
     <% } %>
-    <link rel="shortcut icon" type="image/x-icon" href="<%=theme.favicon%>">
     <%-open_graph()%>
+    <title><%=pageTitle%></title>
+    <link rel="shortcut icon" type="image/x-icon" href="<%=theme.favicon%>">
     <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
         <% theme.stylesheets.forEach(function(url) { %>
             <link rel="stylesheet" href="<%=url%>">
@@ -71,10 +71,29 @@ if (is_home()) pageTitle = config.title;
         </div>
 
         <div class="footer-outer">
-            <div class="footer-author">
-                © <%=theme.since%> - <%=time(new Date(),'Y')%> <%=config.author%>
+            <div class="footer-items">
+                <span class="footer-copyright">
+                    <i class="fa fa-copyright"></i>
+                </span>
+                <span class="footer-year">
+                    <%=theme.since%> - <%=time(new Date(),'Y')%>
+                </span>
+                <span class="footer-author">
+                    <%=config.author%>
+                </span>
+                <%if (theme.footer_wordcount) { %>
+                    <span class="footer-wordcount">
+                        <i class="fa fa-pencil footer-icon"></i>
+                        Has <%=totalcount(site)%> words.
+                    </span>
+                <% } %>
             </div>
-            <div class="footer-inner">由 <a href="http://hexo.io">Hexo</a> 强力驱动 | 主题 - <a href="https://github.com/isecret/Hola">Hola</a></div>
+            <div class="footer-inner">
+                <span class="footer-other">
+                    <%-theme.footer_expand%>
+                    Proudly powered by <a href="http://hexo.io">Hexo</a> and Theme by <a href="https://github.com/isecret/Hola">Hola</a>.
+                </span>
+            </div>
         </div>
     </div>
     <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
@@ -104,7 +123,7 @@ if (is_home()) pageTitle = config.title;
             })
             .then(function (data) {
                 var hitokoto = document.getElementById('hitokoto');
-                hitokoto.innerText = '「' + data.hitokoto + '」——' + data.from;
+                hitokoto.innerText = '『' + data.hitokoto + '』——' + '「' + data.from + '」';
             })
             .catch(function (err) {
                 console.error(err);
