@@ -84,7 +84,7 @@ if (is_home()) pageTitle = config.title;
                 <span class="footer-author">
                     <%=config.author%>
                 </span>
-                <%if (theme.footer_wordcount) { %>
+                <%if (theme.footer_wordcount == 'enabled') { %>
                     <span class="footer-wordcount">
                         <i class="fa fa-pencil footer-icon"></i>
                         Has <%=totalcount(site)%> words.
@@ -120,7 +120,7 @@ if (is_home()) pageTitle = config.title;
     <% } %>
     <% if (theme.hitokoto == 'enabled') { %>
     <script>
-        fetch('https://v1.hitokoto.cn')
+        fetch('https://api.hitokoto.cn')
             .then(function (res){
                 return res.json();
             })

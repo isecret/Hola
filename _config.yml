@@ -1,6 +1,6 @@
 
 # 站点关键字
-keywords: "Secret Blog, Secret, 王茂的个人博客"
+keywords: "Secret Blog"
 
 # 建站日期
 since: 2016
@@ -10,18 +10,18 @@ menu:
   首页: /
   关于: /about
   友链: /links
-  捐赠: https://jp.wangmao.me/donate
 
 # 联系方式
 social:
-  QQ: 572524331
-  邮箱: root@isecret.vip
-  微博: myiooc
-  GitHub: isecret
-  Coding: isecret
+  QQ:
+  邮箱:
+  微博:
+  GitHub:
+  Coding:
 
-# 底部字数统计 需安装 hexo-wordcount 插件
-footer_wordcount: enabled
+# 底部字数统计，需安装 hexo-wordcount 插件
+# 安装命令 npm install hexo-wordcount，然后启用为 enabled
+footer_wordcount: disabled
 
 # 底部版权补充
 footer_expand: 'Hosted by <a href="https://pages.coding.me">Coding Pages</a>, '
@@ -37,13 +37,13 @@ hitokoto: enabled
 
 # Gitment
 gitment:
-  owner: isecret
-  repo: comments
-  client_id: fd2eb35d0541586fff12
-  client_secret: 2d3600405c3d52acc4350bde075e176cdb633cea
+  owner:
+  repo:
+  client_id:
+  client_secret:
 
 # 腾讯统计
-tencent_analytics: 63006715
+tencent_analytics:
 
 # CSS 样式表路径
 stylesheets:
