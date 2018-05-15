@@ -498,6 +498,11 @@ article {
     border-radius: 1px;
 }
 
+.highlight .line {
+    font-size: 13px !important;
+    height: 20px;
+}
+
 .highlight, pre {
     overflow: auto;
     margin: 20px 0;
@@ -585,9 +590,6 @@ caption, code, td, th {
     overflow-x: auto;
 }
 
-.highlight .line {
-    height: 20px;
-}
 
 .line .comment,
 .line .meta {

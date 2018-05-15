@@ -17,17 +17,21 @@
         <span>创作于 <%=date(page.date, 'll')%></span>
     </div>
     <div class="post-category">
-        <span>分类于「<% page.categories.forEach(function(category, index) { %>
-                    <% if (index>0) {%>、<% } %>
-                    <a href="/categories/<%=category.name%>"><%=category.name%></a>
-                <% }); %>」
-        </span>
+        <% if (page.categories.length > 0) { %>
+            <span>分类于「<% page.categories.forEach(function(category, index) { %>
+                        <% if (index>0) {%>、<% } %>
+                        <a href="/categories/<%=category.name%>"><%=category.name%></a>
+                    <% }); %>」
+            </span>
+        <% } %>
     </div>
     <div class="post-tags">
-        <% page.tags.forEach(function(tag, index) { %>
-            <% if (index>0) {%>、<% } %>
-            <a href="/tags/<%=tag.name%>">#<%=tag.name%></a>
-        <% }); %>
+        <% if (page.tags.length > 0) { %>
+            <% page.tags.forEach(function(tag, index) { %>
+                <% if (index>0) {%>、<% } %>
+                <a href="/tags/<%=tag.name%>">#<%=tag.name%></a>
+            <% }); %>
+        <% } %>
     </div>
     <% if (page.prev || page.next){ %>
         <div class="pagination">

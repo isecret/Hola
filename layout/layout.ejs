@@ -56,10 +56,13 @@ if (is_home()) pageTitle = config.title;
                 </div>
             </div>
             <div class="header-menu">
-                <% Object.keys(theme.menu).forEach(function(key) { %>
+                <% Object.keys(theme.menu).forEach(function(key, num) { %>
                     <span class="header-nav">
                         <a href="<%=theme.menu[key]%>"><%=key%></a>
                     </span>
+                    <% if (Object.keys(theme.menu).length - 1 > num) { %>
+                        <span class="flag">/</span>
+                    <% } %>
                 <% }); %>
             </div>
         </div>
