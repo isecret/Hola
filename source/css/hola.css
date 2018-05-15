@@ -314,7 +314,7 @@ blockquote {
 }
 
 .recent-posts, .post, .page, .archive, .tag, .category, .archive {
-    min-height: 620px;
+    min-height: 520px;
 }
 
 .recent-posts img, .post img, .page img, .archive img, .tag img, .category img, .archive img {

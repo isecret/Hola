@@ -2,7 +2,7 @@
 
 > A delicate, single page theme, so beautiful, right?
 
-![Hola](https://static.isecret.vip/screencapture-blog-isecret-vip-2018-04-09-14_18_27.png)
+![Hola](https://static.isecret.vip/screencapture-blog-isecret-vip-2018-05-15-19_00_21.png)
 
 ## How use it?
 
@@ -22,13 +22,23 @@ git clone https://github.com/isecret/Hola
 
 Wait a moment. Hola has been installed to your Hexo. it's so easy.
 
-All right. Let's turn it on! You need to edit `your_hexo_path/_config.yml` . find `theme` the param. Change it.
+All right. Let's turn it on! You need to edit `your_hexo_path/_config.yml`. find `theme` the param. Change it.
 
 ```yaml
 theme: Hola
 ```
 
 ## Individualization
+
+On the footer, Count the number of words, but you need to install the expand.
+
+Use `terminal` input the next command.
+
+```bash
+npm install hexo-wordcount
+```
+
+Nice! At now, You need to edit `your_hexo_path/config.yml`. find `footer_wordcount` the param and change it to `enabled`.
 
 About the theme Individualization, You need to wait for yourself to find out.
 
