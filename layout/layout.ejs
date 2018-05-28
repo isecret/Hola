@@ -1,9 +1,9 @@
 
 <%
 var pageTitle = page.title || config.subtitle || '';
-if (is_archive()) pageTitle = '归档';
-if (is_tag()) pageTitle = '标签: ' + page.tag;
-if (is_category()) pageTitle = '分类: ' + page.category;
+if (is_archive()) pageTitle = 'Archive';
+if (is_tag()) pageTitle = 'Tag: ' + page.tag;
+if (is_category()) pageTitle = 'Category: ' + page.category;
 if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
 if (is_year()) pageTitle += ': ' + page.year;
 pageTitle += ' | ' + config.title;

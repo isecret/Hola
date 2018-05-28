@@ -23,7 +23,7 @@
             <div class="nav-next nav-item">
                 <a href="/page/<%=page.next%>">
                     <i class="fa fa-angle-left"></i>
-                    <span>较旧的文章</span>
+                    <span>Older</span>
                 </a>
             </div>
         <% } %>
@@ -31,12 +31,12 @@
             <div class="nav-prev nav-item">
                 <% if (page.prev == 1) { %>
                     <a href="/">
-                        <span>较新的文章</span>
+                        <span>Newer</span>
                         <i class="fa fa-angle-right"></i>
                     </a>
                 <% } else { %>
                     <a href="/page/<%=page.prev%>">
-                        <span>较新的文章</span>
+                        <span>Newer</span>
                         <i class="fa fa-angle-right"></i>
                     </a>
                 <% } %>

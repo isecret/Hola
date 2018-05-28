@@ -7,9 +7,10 @@ since: 2016
 
 # 导航栏
 menu:
-  首页: /
-  关于: /about
-  友链: /links
+  Home: /
+  About: /about
+  Links: /links
+  Donate: https://jp.wangmao.me/donate
 
 # 联系方式
 social:
@@ -21,7 +22,7 @@ social:
 
 # 底部字数统计，需安装 hexo-wordcount 插件
 # 安装命令 npm install hexo-wordcount，然后启用为 enabled
-footer_wordcount: disabled
+footer_wordcount: enabled
 
 # 底部版权补充
 footer_expand: 'Hosted by <a href="https://pages.coding.me">Coding Pages</a>, '
@@ -33,17 +34,17 @@ favicon: /favicon.ico
 logo: /favicon.png
 
 # 一言 hitokoto
-hitokoto: enabled
+hitokoto: disabled
 
 # Gitment
 gitment:
-  owner:
-  repo:
-  client_id:
-  client_secret:
+  owner: isecret
+  repo: comments
+  client_id: fd2eb35d0541586fff12
+  client_secret: 2d3600405c3d52acc4350bde075e176cdb633cea
 
 # 腾讯统计
-tencent_analytics:
+tencent_analytics: 65849732
 
 # CSS 样式表路径
 stylesheets:
