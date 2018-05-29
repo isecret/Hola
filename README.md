@@ -6,6 +6,8 @@
 
 ## How use it?
 
+[中文文档](https://blog.wangmao.me/hexo-theme-hola.html) | [Issues](https://github.com/isecret/Hola/issues?q=is%3Aissue+is%3Aclosed)
+
 First, we need to install [Hexo](https://hexo.io). But that's so easy, so i think you can do it.
 
 The next . Use `terminal` input the next command.
