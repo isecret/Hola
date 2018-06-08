@@ -107,7 +107,7 @@ if (is_home()) pageTitle = config.title;
     <% if (is_post() || is_page()) { %>
         <script>
             var gitment = new Gitment({
-                id: window.location.pathname.replace(/(\/$)/g,""),
+                id: window.location.pathname.replace(/(\/$)/g,"").length > 49 ? md5(window.location.pathname): window.location.pathname.replace(/(\/$)/g,""),
                 owner: "<%=theme.gitment.owner%>",
                 repo: "<%=theme.gitment.repo%>",
                 oauth: {

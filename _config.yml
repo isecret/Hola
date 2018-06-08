@@ -41,7 +41,7 @@ gitment:
   owner: isecret
   repo: comments
   client_id: fd2eb35d0541586fff12
-  client_secret: 2d3600405c3d52acc4350bde075e176cdb633cea
+  client_secret: fa17cd5c6e7d5740eef3095b2de3bc196c655b1a
 
 # 腾讯统计
 tencent_analytics: 65849732
@@ -58,6 +58,7 @@ stylesheets:
 scripts:
 - /js/jquery.min.js
 - /js/fetch.min.js
+- /js/md5.min.js
 - /js/instantclick.min.js
 - /js/gitment.browser.min.js
 - /js/hola.js
