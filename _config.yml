@@ -10,7 +10,7 @@ menu:
   Home: /
   About: /about
   Links: /links
-  Donate: https://jp.wangmao.me/donate
+  Donate: https://ca.wangmao.me/donate
 
 # 联系方式
 social:
@@ -48,7 +48,7 @@ tencent_analytics: 65849732
 
 # CSS 样式表路径
 stylesheets:
-- //fonts.openapi.link/css?family=Lato:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext
+- //fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext
 - /css/font-awesome.min.css
 - /css/gitment.css
 - /css/highlight.css
