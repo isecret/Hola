@@ -106,7 +106,7 @@ input,select {
 }
 
 input[type=checkbox] {
-    vertical-align: bottom
+    vertical-align: middle
 }
 
 b,strong {
@@ -159,6 +159,8 @@ body {
     line-height: 1.8;
     color: #555;
     background: #F5F5F5;
+    background-image: url(/images/circuit.png);
+    background-repeat: repeat-x, repeat-x;
 }
 
 body, html {

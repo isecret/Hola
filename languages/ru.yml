@@ -1,0 +1,18 @@
+nav:
+    homepage: "Главная страница"
+    archive: "Архив"
+    article_num: "Количество статей"
+post:
+    toc: "каталог"
+    visitor: "Посетители"
+    views: "Просмотры"
+    created_at: "редактировать"
+    continue: "Читать далее"
+    older: "Старые"
+    newer: "Новые"
+title:
+    category: "Категории"
+    tag: "Тег"
+misc:
+    home: "Главная"
+    theme: "Тема"

@@ -1,0 +1,18 @@
+nav:
+    homepage: "Casa"
+    archive: "Archivo"
+    article_num: "Número de artículo"
+post:
+    toc: "Directorio"
+    visitor: "Visitantes"
+    views: "Vista"
+    created_at: "Editado en"
+    continue: "Sigue leyendo"
+    older: "Mayor"
+    newer: "Más nuevo"
+title:
+    category: "Categoría"
+    tag: "Etiqueta"
+misc:
+    home: "Casa"
+    theme: "tema"

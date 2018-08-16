@@ -1,0 +1,18 @@
+nav:
+    homepage: "الرئيسية"
+    archive: "أرشيف"
+    article_num: "رقم المقالة"
+post:
+    toc: "دليل"
+    visitor: "زوار"
+    views: "مشاهدات"
+    created_at: "تم التعديل في"
+    continue: "واصل القراءة"
+    older: "أقدم"
+    newer: "أحدث"
+title:
+    category: "فئة"
+    tag: "وسم"
+misc:
+    home: "رئيسية"
+    theme: "سمة"

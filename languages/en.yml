@@ -1,0 +1,18 @@
+nav:
+    homepage: "Home"
+    archive: "Archives"
+    article_num: "Number of articles"
+post:
+    toc: "TOC"
+    visitor: "Visitors"
+    views: "Views"
+    created_at: "Edited In"
+    continue: "Read more"
+    older: "Older"
+    newer: "Newer"
+title:
+    category: "Categories"
+    tag: "Tag"
+misc:
+    home: "Home"
+    theme: "Theme"

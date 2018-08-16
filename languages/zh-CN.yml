@@ -1,0 +1,18 @@
+nav:
+    homepage: "主页"
+    archive: "归档"
+    article_num: "文章总数"
+post:
+    toc: "目录"
+    visitor: "访客"
+    views: "浏览量"
+    created_at: "编辑于"
+    continue: "阅读全文"
+    older: "旧篇"
+    newer: "新篇"
+title:
+    category: "分类"
+    tag: "标签"
+misc:
+    home: "主页"
+    theme: "主题"

@@ -1,0 +1,18 @@
+nav:
+    homepage: "Laman"
+    archive: "Arkib"
+    article_num: "Bilangan Artikel"
+post:
+    toc: "Direktori"
+    visitor: "Pelawat"
+    views: "Paparan"
+    created_at: "Diedit Dalam"
+    continue: "Teruskan Membaca"
+    older: "Lama"
+    newer: "Baru"
+title:
+    category: "Kategori"
+    tag: "Tag"
+misc:
+    home: "Laman"
+    theme: "Tema"

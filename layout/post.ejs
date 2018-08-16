@@ -6,7 +6,7 @@
 <article class="post">
     <h1 class="post-title"><%=page.title%></h1>
     <% if (tocContents.length > 0) { %>
-        <h2>目录</h2>
+        <h2><%=__('post.toc')%></h2>
         <%-tocContents%>
         <br>
     <% } %>
@@ -14,11 +14,11 @@
 </article>
 <div class="post-footer">
     <div class="post-author">
-        <span>Written in <%=date(page.date, 'll')%></span>
+        <span><%=__('post.created_at')%> <%=page.date.format('ll')%></span>
     </div>
     <div class="post-category">
         <% if (page.categories.length > 0) { %>
-            <span>In「<% page.categories.forEach(function(category, index) { %>
+            <span>「<% page.categories.forEach(function(category, index) { %>
                         <% if (index>0) {%>、<% } %>
                         <a href="/categories/<%=category.name%>"><%=category.name%></a>
                     <% }); %>」

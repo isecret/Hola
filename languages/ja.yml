@@ -1,0 +1,18 @@
+nav:
+    homepage: "ホーム"
+    archive: "過去の投稿"
+    article_num: "記事番号"
+post:
+    toc: "ディレクトリ"
+    visitor: "訪問者"
+    views: "ビュー"
+    created_at: "編集された"
+    continue: "読み続けて"
+    older: "古い"
+    newer: "新しい"
+title:
+    category: "カテゴリー"
+    tag: "ラベル"
+misc:
+    home: "ホーム"
+    theme: "テーマ"

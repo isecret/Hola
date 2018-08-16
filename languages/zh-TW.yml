@@ -1,0 +1,18 @@
+nav:
+    homepage: "首頁"
+    archive: "過往"
+    article_num: "文章總數"
+post:
+    toc: "目錄"
+    visitor: "訪客"
+    views: "瀏覽量"
+    created_at: "編輯於"
+    continue: "繼續閱讀"
+    older: "舊篇"
+    newer: "新篇"
+title:
+    category: "分類"
+    tag: "標籤"
+misc:
+    home: "主頁"
+    theme: "主題"

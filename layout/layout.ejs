@@ -1,9 +1,9 @@
 
 <%
 var pageTitle = page.title || config.subtitle || '';
-if (is_archive()) pageTitle = 'Archive';
-if (is_tag()) pageTitle = 'Tag: ' + page.tag;
-if (is_category()) pageTitle = 'Category: ' + page.category;
+if (is_archive()) pageTitle = __('sidebar.archive');
+if (is_tag()) pageTitle = __('title.tag') +' - '+ page.tag;
+if (is_category()) pageTitle = __('title.category') +' - '+ page.category;
 if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
 if (is_year()) pageTitle += ': ' + page.year;
 pageTitle += ' | ' + config.title;
@@ -18,6 +18,7 @@ if (is_home()) pageTitle = config.title;
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="baidu-site-verification" content="<%=theme.baidu_verification%>" />
     <% if (page.keywords !== undefined) { %>
         <meta name="keywords" content="<%=page.keywords%>" />
     <% } else if (page.tags !== undefined && page.tags.length > 0) { %>
@@ -43,6 +44,13 @@ if (is_home()) pageTitle = config.title;
             })();
         </script>
     <% } %>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3693635564239363",
+            enable_page_level_ads: true
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -57,9 +65,15 @@ if (is_home()) pageTitle = config.title;
             </div>
             <div class="header-menu">
                 <% Object.keys(theme.menu).forEach(function(key, num) { %>
-                    <span class="header-nav">
-                        <a href="<%=theme.menu[key]%>"><%=key%></a>
-                    </span>
+                    <% if (__('nav.'+key) !== "nav."+key) { %>
+                        <span class="header-nav">
+                            <a href="<%=theme.menu[key]%>"><%=__('nav.'+key)%></a>
+                        </span>
+                    <% } else {%>
+                        <span class="header-nav">
+                            <a href="<%=theme.menu[key]%>"><%=key%></a>
+                        </span>
+                    <% } %>
                     <% if (Object.keys(theme.menu).length - 1 > num) { %>
                         <span class="flag">/</span>
                     <% } %>
@@ -94,7 +108,7 @@ if (is_home()) pageTitle = config.title;
             <div class="footer-inner">
                 <span class="footer-other">
                     <%-theme.footer_expand%>
-                    Proudly powered by <a href="http://hexo.io">Hexo</a> and Theme by <a href="https://github.com/isecret/Hola">Hola</a>.
+                    <%= __('misc.theme')%> <a href="https://github.com/isecret/Hola">Hola</a> / <a href="http://hexo.io">Hexo</a>.
                 </span>
             </div>
         </div>

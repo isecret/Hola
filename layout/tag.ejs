@@ -3,7 +3,7 @@
     <h1><%=page.tag%></h1>
     <% page.posts.each(function(article) { %>
         <div class="recent-post-items">
-            <span class="recent-post-time"><%=date(article.date, 'MMM Do')%></span>
+            <span class="recent-post-time"><%=article.date.format('MMM Do')%></span>
             <span class="recent-post-item">
                 <% if (article.link) { %>
                     <a href="<%=url_for(article.link)%>" target="_blank"><%=article.title%></a>
@@ -23,7 +23,7 @@
             <div class="nav-next nav-item">
                 <a href="/page/<%=page.next%>">
                     <i class="fa fa-angle-left"></i>
-                    <span>Older</span>
+                    <span><%=__('post.older')%></span>
                 </a>
             </div>
         <% } %>
@@ -31,12 +31,12 @@
             <div class="nav-prev nav-item">
                 <% if (page.prev == 1) { %>
                     <a href="/">
-                        <span>Newer</span>
+                        <span><%=__('post.newer')%></span>
                         <i class="fa fa-angle-right"></i>
                     </a>
                 <% } else { %>
                     <a href="/page/<%=page.prev%>">
-                        <span>Newer</span>
+                        <span><%=__('post.newer')%></span>
                         <i class="fa fa-angle-right"></i>
                     </a>
                 <% } %>

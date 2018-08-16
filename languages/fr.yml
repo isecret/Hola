@@ -1,0 +1,18 @@
+nav:
+    homepage: "Accueil"
+    archive: "Archives"
+    article_num: "Nombre d'articles"
+post:
+    toc: "Annuaire"
+    visitor: "Visiteurs"
+    views: "Vues"
+    created_at: "Édité en"
+    continue: "Continuer la lecture"
+    older: "Ancien"
+    newer: "Récent"
+title:
+    category: "Catégorie"
+    tag: "Libellé"
+misc:
+    home: "Accueil"
+    theme: "Thème"

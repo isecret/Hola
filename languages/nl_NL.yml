@@ -1,0 +1,18 @@
+nav:
+    homepage: "Home"
+    archive: "Archief"
+    article_num: "Aantal artikelen"
+post:
+    toc: "Directory"
+    visitor: "Bezoekers"
+    views: "Bekeken"
+    created_at: "Edit"
+    continue: "Lees meer"
+    older: "Ouder"
+    newer: "Nieuwer"
+title:
+    category: "Categorieën"
+    tag: "Label"
+misc:
+    home: "Home"
+    theme: "Thema"

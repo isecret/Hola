@@ -7,10 +7,10 @@ since: 2016
 
 # 导航栏
 menu:
-  Home: /
+  homepage: /
   About: /about
   Links: /links
-  Donate: https://ca.wangmao.me/donate
+  API: https://openapi.link/
 
 # 联系方式
 social:
@@ -36,6 +36,9 @@ logo: /favicon.png
 # 一言 hitokoto
 hitokoto: disabled
 
+# 百度站点验证
+baidu_verification: izYGvTM67i
+
 # Gitment
 gitment:
   owner: isecret
@@ -48,7 +51,7 @@ tencent_analytics: 65849732
 
 # CSS 样式表路径
 stylesheets:
-- //fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext
+- /css/fonts.css
 - /css/font-awesome.min.css
 - /css/gitment.css
 - /css/highlight.css

@@ -1,0 +1,18 @@
+nav:
+    homepage: "Home"
+    archive: "Arquivos"
+    article_num: "Número de Artigos"
+post:
+    toc: "Directório"
+    visitor: "Visitantes"
+    views: "Visualizações"
+    created_at: "Edição de"
+    continue: "Continue lendo"
+    older: "Anteriores"
+    newer: "Recentes"
+title:
+    category: "Categorias"
+    tag: "Marcadores"
+misc:
+    home: "Home"
+    theme: "Tema"
