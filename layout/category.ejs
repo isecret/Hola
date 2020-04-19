@@ -5,10 +5,10 @@
         <div class="recent-post-items">
             <span class="recent-post-time"><%=article.date.format('MMM Do')%></span>
             <span class="recent-post-item">
-                <% if (article.link) { %>
-                    <a href="<%=url_for(article.link)%>" target="_blank"><%=article.title%></a>
+                <% if (article.path) { %>
+                    <a href="<%=url_for(article.path)%>" target="_blank"><%=article.title%></a>
                 <% } else { %>
-                    <a href="<%=url_for(article.link)%>">
+                    <a href="<%=url_for(article.path)%>">
                     <%=article.title || 'No Title'%>
                     </a>
                 <% } %>
