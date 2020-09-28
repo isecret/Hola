@@ -1,8 +1,10 @@
 # Hola for Hexo
 
-> A delicate, single page theme, so beautiful, right?
+> I love this magic to the world
 
-![Hola](https://static.isecret.vip/screencapture-blog-isecret-vip-2018-05-15-19_00_21.png)
+[[Preview / 预览]](https://blog.wangmao.me)
+
+![Hola](https://raw.githubusercontent.com/isecret/img/master/982ACAD4940DAEB88EEDDA6810B9D7B0.png)
 
 ## How use it?
 
