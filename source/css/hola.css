@@ -1,3 +1,31 @@
+:root {
+    --main-color: tomato;
+    --font-color: #555;
+    --sub-font-color: #999;
+    --underline-font-color: #555;
+    --link-color: tomato;
+    --border-color: #F0F0F0;
+    --shadow-color: #DDD;
+    --underline-color: #f7f7f7;
+    --background-color: #F5F5F5;
+    --page-color: #FFF;
+    --body-background-image: url(/images/circuit.png);
+}
+
+[data-theme="dark"] {
+    --main-color: tomato;
+    --font-color: #B8B8B8;
+    --underline-font-color: #FFF;
+    --sub-font-color: #646161;
+    --link-color: tomato;
+    --border-color: #111;
+    --shadow-color: #1B1B1B;
+    --underline-color: #171514;
+    --background-color: #171514;
+    --page-color: #232222;
+    --body-background-image: none;
+}
+
 abbr,article,aside,audio,blockquote,body,code,div,em,fieldset,footer,form,h1,h2,h3,h4,h5,h6,header,html,img,label,legend,li,nav,object,ol,p,pre,section,span,table,tbody,tfoot,thead,time,tr,ul,video {
     font-weight: inherit;
     vertical-align: baseline;
@@ -31,10 +59,6 @@ small,sub,sup {
 
 strong,sub,sup,td,th {
     font-size: 100%
-}
-
-body,html {
-    height: 100%
 }
 
 html {
@@ -154,24 +178,30 @@ body, h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: var(--underline-font-color);
+}
+
 body {
     font-size: 16px;
     line-height: 1.8;
-    color: #555;
-    background: #F5F5F5;
-    background-image: url(/images/circuit.png);
+    /* color: #555; */
+    color: var(--font-color);
+    /* background: #F5F5F5; */
+    background: var(--background-color);
+    background-image: var(--body-background-image);
     background-repeat: repeat-x, repeat-x;
 }
 
-body, html {
+/* body, html {
     height: 100%;
-}
+} */
 
 a {
     text-decoration: none;
     background-color: transparent;
-    color: tomato;
-    border-bottom: 1px solid tomato;
+    color: var(--link-color);
+    border-bottom: 1px solid var(--main-color);
 }
 
 a, code {
@@ -246,17 +276,17 @@ h6 {
 article h2:before, article h3:before, article h4:before, article h5:before, article h6:before {
     content: '[';
     margin-right: 4px;
-    color: tomato;
+    color: var(--main-color);
 }
 
 article h2:after, article h3:after, article h4:after, article h5:after, article h6:after {
     content: ']';
     margin-left: 4px;
-    color: tomato;
+    color: var(--main-color);
 }
 
 ::selection {
-    background: tomato;
+    background: var(--main-color);
     color: #fff;
 }
 
@@ -270,8 +300,8 @@ img {
 
 code {
     padding: 2px 4px;
-    color: #999;
-    background: #f7f7f7;
+    color: var(--sub-font-color);
+    background: var(--underline-color);
     border-radius: 3px;
     font-size: 14px;
 }
@@ -295,14 +325,14 @@ table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     font-size: 14px;
     table-layout: fixed;
     word-wrap: break-all;
 }
 
 table>tbody>tr:nth-of-type(odd) {
-    background-color: #f7f7f7;
+    background-color: var(--background-color);
 }
 
 td {
@@ -310,8 +340,8 @@ td {
 }
 
 td, th {
-    border-bottom: 1px solid #ddd;
-    border-right: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
 }
 
 b, dt, optgroup, strong {
@@ -322,7 +352,7 @@ blockquote {
     margin: 0;
     padding: 0 15px;
     color: #666;
-    border-left: 4px solid #ddd;
+    border-left: 4px solid var(--border-color);
 }
 
 .recent-posts, .post, .page, .archive, .tag, .category, .archive {
@@ -332,9 +362,9 @@ blockquote {
 .recent-posts img, .post img, .page img, .archive img, .tag img, .category img, .archive img {
     box-sizing: border-box;
     margin: auto;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
-    box-shadow: 5px 5px 10px #DDD;
+    box-shadow: 5px 5px 10px var(--shadow-color);
 }
 
 hr {
@@ -343,7 +373,7 @@ hr {
     margin: 40px 0;
     height: 1px;
     border: none;
-    background-color: #F0F0F0;
+    background-color: var(--border-color);
 }
 
 article {
@@ -354,11 +384,11 @@ article {
     margin: 60px auto;
     position: relative;
     width: 708px;
-    background: #FFF;
+    background: var(--page-color);
     padding: 30px;
-    border: 1px solid #F0F0F0;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
-    box-shadow: 8px 8px 14px #DDD;
+    box-shadow: 8px 8px 14px var(--shadow-color);
 }
 
 @media (max-width:767px) {
@@ -374,7 +404,7 @@ article {
     min-width: 100%;
     display: inline-block;
     padding: 10px 0;
-    border-bottom: 1px solid #F0F0F0;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .header-site {
@@ -386,7 +416,7 @@ article {
 
 .header-subtitle {
     font-style: oblique;
-    color: #999;
+    color: var(--sub-font-color);
     font-size: 14px;
 }
 
@@ -411,7 +441,7 @@ article {
 .recent-post-items .recent-post-time {
     float: left;
     overflow: hidden;
-    color: #999;
+    color: var(--sub-font-color);
     font-size: 14px;
     line-height: 25px;
     display: block;
@@ -438,7 +468,7 @@ article {
 
 .post-footer .post-category, .post-footer .post-tags, .post-footer .post-author {
     font-size: 14px;
-    color: #999;
+    color: var(--sub-font-color);
     text-align: right;
 }
 
@@ -446,7 +476,7 @@ article {
     display: table;
     margin-top: 15px;
     width: 100%;
-    border-top: 1px solid #F0F0F0;
+    border-top: 1px solid var(--border-color);
 }
 
 .noborder {
@@ -481,7 +511,7 @@ article {
 }
 
 .footer-items, .footer-other {
-    color: #999;
+    color: var(--sub-font-color);
     font-size: 14px;
 }
 
@@ -494,7 +524,7 @@ article {
 }
 
 .footer-icon {
-    color: tomato;
+    color: var(--main-color);
 }
 
 .footer-wordcount {

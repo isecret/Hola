@@ -10,7 +10,7 @@ menu:
   homepage: /
   About: /about
   Links: /links
-  API: https://openapi.link/
+#  API: https://openapi.link/
 
 # 联系方式
 social:
@@ -25,7 +25,7 @@ social:
 footer_wordcount: enabled
 
 # 底部版权补充
-footer_expand: 'Hosted by <a href="https://pages.coding.me">Coding Pages</a>, '
+footer_expand: 'Hosted by <a href="https://bandwagonhost.com/aff.php?aff=33281" target="_blank">Bandwagon Host</a>, '
 
 # 站点微缩图
 favicon: /favicon.ico
@@ -53,15 +53,18 @@ tencent_analytics: 65849732
 stylesheets:
 - /css/fonts.css
 - /css/font-awesome.min.css
+- /css/hola.css
 - /css/gitment.css
 - /css/highlight.css
-- /css/hola.css
+- /css/alu.css
 
 # Javascript 脚本路径
 scripts:
 - /js/jquery.min.js
 - /js/fetch.min.js
 - /js/md5.min.js
-- /js/instantclick.min.js
+# - /js/instantclick.min.js
 - /js/gitment.browser.min.js
+- /js/alu.js
 - /js/hola.js
+# - /js/jquery.pjax.js
