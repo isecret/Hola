@@ -3,7 +3,7 @@
  */
 
 
-.highlight {
+ .highlight {
     border-radius: 1px;
 }
 
@@ -17,8 +17,8 @@
     margin: 20px 0;
     padding: 0;
     font-size: 13px;
-    color: #4d4d4c;
-    background: #f7f7f7;
+    color: var(--sub-font-color);
+    background: var(--underline-color);
     line-height: 1.6;
 }
 
@@ -47,9 +47,9 @@ figure {
 .highlight .gutter pre {
     padding-left: 10px;
     padding-right: 10px;
-    color: #869194;
+    color: var(--sub-font-color);
     text-align: right;
-    background-color: #f7f7f7;
+    background-color: var(--underline-color);
 }
 
 .highlight pre {
@@ -60,8 +60,8 @@ figure {
 
 code {
     padding: 2px 4px;
-    color: #999;
-    background: #f7f7f7;
+    color: var(--sub-font-color);
+    background: var(--underline-color);
     border-radius: 3px;
     font-size: 14px;
 }
@@ -88,7 +88,7 @@ caption, code, td, th {
 .highlight .code pre {
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #f7f7f7;
+    background-color: var(--underline-color);
 }
 
 .hljs {

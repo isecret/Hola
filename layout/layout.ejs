@@ -34,7 +34,7 @@ if (is_home()) pageTitle = config.title;
             <link rel="stylesheet" href="<%=url%>">
         <% }); %>
     <% } %>
-    <% if (theme.tencent_analytics !== undefined) { %>
+    <!-- <% if (theme.tencent_analytics !== undefined) { %>
         <script type="text/javascript">
             (function() {
                 var hm = document.createElement("script");
@@ -43,7 +43,17 @@ if (is_home()) pageTitle = config.title;
                 s.parentNode.insertBefore(hm, s);
             })();
         </script>
-    <% } %>
+    <% } %> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123139263-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-123139263-1');
+    </script>
 </head>
 <body>
     <div class="container">
@@ -52,7 +62,7 @@ if (is_home()) pageTitle = config.title;
                 <div class="header-title">
                     <%=config.title%>
                 </div>
-                <div id="hitokoto" class="header-subtitle">
+                <div id="hot-comments" class="header-subtitle">
                     <%=config.subtitle%>
                 </div>
             </div>
@@ -103,6 +113,9 @@ if (is_home()) pageTitle = config.title;
                     <%-theme.footer_expand%>
                     <%= __('misc.theme')%> <a href="https://github.com/isecret/Hola">Hola</a> / <a href="http://hexo.io">Hexo</a>.
                 </span>
+                <!-- <label id="theme-switch" class="theme-switch" for="checkbox_theme">
+                    <input type="checkbox" id="checkbox_theme">
+                </label> -->
             </div>
         </div>
     </div>
@@ -120,26 +133,78 @@ if (is_home()) pageTitle = config.title;
                 oauth: {
                     client_id: "<%=theme.gitment.client_id%>",
                     client_secret: "<%=theme.gitment.client_secret%>"
-                }
+                },
+                perPage: 10
             });
             gitment.render("gitment");
         </script>
     <% } %>
+    <script>
+
+        // 切换模式
+        function detectColorScheme(){
+            var theme="light";
+
+            if(localStorage.getItem("theme")){
+                if(localStorage.getItem("theme") == "dark"){
+                    theme = "dark";
+                }
+            } else if(!window.matchMedia) {
+                return false;
+            } else if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                theme = "dark";
+            }
+
+            document.documentElement.setAttribute("data-theme", theme);
+        }
+
+        // 自动切换
+        window.matchMedia("(prefers-color-scheme: light)").addEventListener('change', function () {
+            detectColorScheme();
+        });
+
+        detectColorScheme();
+
+        // 手动切换 下个版本再上
+        // const toggleSwitch = document.querySelector('#theme-switch input[type="checkbox"]');
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                localStorage.setItem('theme', 'dark');
+                document.documentElement.setAttribute('data-theme', 'dark');
+                toggleSwitch.checked = true;
+            } else {
+                localStorage.setItem('theme', 'light');
+                document.documentElement.setAttribute('data-theme', 'light');
+                toggleSwitch.checked = false;
+            }    
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme, false);
+
+        if (document.documentElement.getAttribute("data-theme") == "dark"){
+            toggleSwitch.checked = true;
+        }
+    </script>
     <% if (theme.hitokoto == 'enabled') { %>
     <script>
-        fetch('https://api.hitokoto.cn')
+        fetch('https://api.comments.hk/')
             .then(function (res){
                 return res.json();
             })
             .then(function (data) {
-                var hitokoto = document.getElementById('hitokoto');
-                hitokoto.innerText = '『' + data.hitokoto + '』——' + '「' + data.from + '」';
+                var hot_comments = document.getElementById('hot-comments');
+                hot_comments.innerText = data.comment_content + '——' + '来自 ' + data.comment_nickname + ' 在「'+data.title+'」下方的评论';
             })
             .catch(function (err) {
                 console.error(err);
             });
     </script>
     <% } %>
-    <script data-no-instant>InstantClick.init();</script>
+    <script>
+        ALU({
+            element: document.getElementsByTagName('article')[0]
+        });
+    </script>
 </body>
 </html>
